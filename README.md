@@ -4,10 +4,13 @@ Batch generate markdown API documentation from a folder of [jsdoc](http://usejsd
 
 # How to use
 1\. Install dependencies
+
 npm install
 2\. Run command prompt
+
 node ./docs.js
 3\. Specify input and output folder in prompt line
+
 ```
 Both paths need to be in POSIX (Unix) syntax e.g. D:/path/to/your/folder
 If no input path is given, current working directory will be selected.
