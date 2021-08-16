@@ -1,0 +1,27 @@
+{{#if returns}}
+{{#if returns.[0].description~}}
+**Returns**: 
+{{#each returns~}}
+{{tableHead returns "name|Param" "type|Type" "defaultvalue|Default" "description|Description" ~}}
+
+{{#tableRow returns "name" "type" "defaultvalue" "description" ~}}
+| {{#if @col1}}{{#if optional}}[{{/if~}}
+{{#if variable}}...{{/if~}}
+{{{name}~}}
+{{#if optional}}]{{/if}} | {{/if~}}
+{{#if @col2}}{{>linked-type-list types=type.names delimiter=" \| " }} | {{/if~}}
+{{#if @col3}}{{>defaultvalue}} | {{/if~}}
+{{#if @col4}}{{{stripNewlines (inlineLinks description)}}} |{{/if}}
+{{/tableRow}}
+{{#if type~}}
+{{#if type.names}}{{>linked-type-list types=type.names delimiter=" \| " ~}}{{/if}}
+{{~#if description}} - {{{inlineLinks description}}}{{/if~}}
+{{else~}}
+{{{inlineLinks description}~}}
+{{/if~}}
+
+
+{{~/each}}
+  
+{{/if}}{{/if}}
+

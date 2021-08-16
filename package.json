@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "validator": "^6.2.1",
+    "vuex": "^3.1.1"
+  },
+  "scripts": {
+    "docs": "jsdoc2md ..\\servcice\\**\\*.js > api.md"
+  },
+  "devDependencies": {
+    "dmd-gitbook": "0.0.2",
+    "dmd-globals-docs": "^1.0.0",
+    "dmd-readable": "^0.4.0",
+    "jsdoc-to-markdown": "^5.0.0"
+  }
+}
