@@ -1,29 +1,17 @@
-# 使用方法
-安装依赖
+# jsfolder-to-markdown
+
+Batch generate markdown API documentation from a folder of [jsdoc](http://usejsdoc.org) annotated source code. Useful for injecting API docs into project README files.
+
+# How to use
+1\. Install dependencies
 npm install
-运行
+2\. Run command prompt
 node ./docs.js
-
-配置输入输出路径需按照POSIX格式
-如果不填，输入路径默认当前目录，输出路径默认./docs
-
-工具库js文件中需要:
+3\. Specify input and output folder in prompt line
 ```
-标题和namespace,标题作为md的标题,namespace作为生成md的文件名
-/**
- * 新手引导API
- * @namespace guide
-*/
-方法注释里记得要加@memberof namespace
-/**
-* 根据组件位置决定新手引导图片位置
-* @param {Array} guides 需要显示的新手引导图片名列表
-* @param {Array} options 选项
-* @param {String} options.ref ref对象名(ref为空则默认新手引导显示在top: 0)
-* @param {String} options.rect 新手指导图片显示在ref对象的哪个布局位置(默认bottom)
-* @param {Boolean} options.scroll 是否显示前先滚动到ref位置(默认false)
-* @param {Number} options.offset 偏移量(默认0)
-* @param {Function} callback 回调函数
-* @memberof guide
-*/
+Both paths need to be in POSIX (Unix) syntax e.g. D:/path/to/your/folder
+If no input path is given, current working directory will be selected.
+If no output path is given, docs will be generated to ./docs.
 ```
+# See also
+This project is based on [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown) and [jsdoc](http://usejsdoc.org). Source codes should be annoatated correctly, check their documentation for more information. 
